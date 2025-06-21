@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - DreamHomes Real Estate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lobster', cursive;
+    }
+
+    @keyframes fade-in-bottom {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoom-in {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .fade-in-bottom {
+      opacity: 0;
+      animation: fade-in-bottom 0.8s ease-out forwards;
+    }
+
+    .zoom-in {
+      opacity: 0;
+      animation: zoom-in 0.6s ease-in-out forwards;
+    }
+
+    .animate-delay-1 { animation-delay: 0.3s; }
+    .animate-delay-2 { animation-delay: 0.6s; }
+    .animate-delay-3 { animation-delay: 0.9s; }
+  </style>
+</head>
+<body onload="blogPageAlert()">
+  <section class="sub-header fade-in-bottom animate-delay-1">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="properties.html">PROPERTIES</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1 class="zoom-in animate-delay-2">Latest Real Estate Insights</h1>
+  </section>
+
+  <section class="blog-content fade-in-bottom animate-delay-2">
+    <div class="row">
+      <div class="blog-left zoom-in animate-delay-1">
+        <img src="images/blog-property.jpg" alt="Property Blog" class="zoom-in animate-delay-3">
+        <h2>Top 5 Tips for First-Time Homebuyers</h2>
+        <p>Buying a home is a major milestone. Learn how to make the process smoother with these essential tips from real estate experts.</p>
+        <br>
+        <p>From understanding market trends to getting your finances in order, these tips will prepare you to confidently find and purchase the home that's right for you.</p>
+
+        <div class="comment-box fade-in-bottom animate-delay-3">
+          <h3>Leave a Comment</h3>
+          <form class="comment-form" onsubmit="return commentAlert()">
+            <input type="text" placeholder="Enter Name" required>
+            <input type="email" placeholder="Enter Email" required>
+            <textarea rows="5" placeholder="Your Comment" required></textarea>
+            <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="blog-right zoom-in animate-delay-2">
+        <h3>Blog Categories</h3>
+        <div><span>Home Buying</span><span>18</span></div>
+        <div><span>Market Trends</span><span>22</span></div>
+        <div><span>Investment Tips</span><span>15</span></div>
+        <div><span>Legal Advice</span><span>8</span></div>
+        <div><span>Commercial Real Estate</span><span>12</span></div>
+        <div><span>Architecture & Design</span><span>9</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer fade-in-bottom animate-delay-2">
+    <h4>About DreamSpace</h4>
+    <p>We're a team of real estate professionals committed to helping people find the right home or investment property. Based in India, serving globally.</p>
+    <p>Made by DreamHomes</p>
+  </section>
+
+  <script>
+    function blogPageAlert() {
+      alert("Welcome to our Blog! Stay informed with the latest in real estate.");
+    }
+
+    function commentAlert() {
+      alert("Thank you for your comment! It has been submitted.");
+      return true;
+    }
+  </script>
+</body>
+</html>

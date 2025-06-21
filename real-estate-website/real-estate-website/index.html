@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DreamHomes Real Estate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <style>
+    @keyframes flipInY {
+      0% {
+        transform: perspective(400px) rotateY(0deg);
+      }
+      50% {
+        transform: perspective(400px) rotateY(180deg);
+      }
+      100% {
+        transform: perspective(400px) rotateY(360deg);
+      }
+    }
+
+    .flip-img {
+      animation: flipInY 5s linear infinite;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+  </style>
+</head>
+
+<body onload="welcomeAlert()">
+  <section class="header">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="properties.html">PROPERTIES</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="text-box">
+      <h1 class="fade-in-bottom">Find Your Dream Home</h1>
+      <p>
+        Discover beautiful apartments, villas, and commercial spaces tailored for you. Your future starts here.
+      </p>
+      <a href="properties.html" class="hero-btn" onclick="propertyAlert()">Browse Listings</a>
+    </div>
+  </section>
+
+  <section class="course">
+    <h1>Property Categories</h1>
+    <p>We offer a wide range of real estate options for every lifestyle and budget.</p>
+    <div class="row">
+      <div class="course-col">
+        <h3>Apartments</h3>
+        <p>Modern, spacious, and conveniently located apartments perfect for families and professionals.</p>
+      </div>
+      <div class="course-col">
+        <h3>Villas</h3>
+        <p>Luxurious private villas with world-class amenities and serene surroundings.</p>
+      </div>
+      <div class="course-col">
+        <h3>Commercial</h3>
+        <p>Prime commercial spaces ideal for offices, retail stores, and startups in thriving neighborhoods.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="campus">
+    <h1>Our Featured Locations</h1>
+    <p>Strategically selected cities with booming real estate markets.</p>
+    <div class="row">
+      <div class="campus-col">
+        <img src="images/mumbai.png" alt="Mumbai" class="flip-img" />
+        <div class="layer">
+          <h3>MUMBAI</h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="images/bangalore.png" alt="Bangalore" class="flip-img" />
+        <div class="layer">
+          <h3>BANGALORE</h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="images/chennai.png" alt="Chennai" class="flip-img" />
+        <div class="layer">
+          <h3>CHENNAI</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facility">
+    <h1>Why Choose Us</h1>
+    <p>We provide unmatched service, quality listings, and trusted support.</p>
+    <div class="row">
+      <div class="facility-col">
+        <h3>Trusted Agents</h3>
+        <p>Our experienced agents guide you every step of the way to find the perfect property.</p>
+      </div>
+      <div class="facility-col">
+        <h3>24/7 Customer Support</h3>
+        <p>We're always here to answer your questions and offer solutions instantly.</p>
+      </div>
+      <div class="facility-col">
+        <h3>Verified Listings</h3>
+        <p>We ensure all properties are legally verified and ready for sale or rent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h1>Client Testimonials</h1>
+    <p>Hear from our satisfied buyers and renters.</p>
+    <div class="row">
+      <div class="testimonial-col">
+        <img src="images/user1.png" alt="User 1" />
+        <div>
+          <p>
+            DreamSpace helped me find the perfect home within weeks. The team was supportive and professional throughout.
+          </p>
+          <h3>MOHAN</h3>
+          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i
+          ><i class="fa fa-star-half-o"></i>
+        </div>
+      </div>
+      <div class="testimonial-col">
+        <img src="images/user2.jpg" alt="User 2" />
+        <div>
+          <p>
+            As a first-time investor, I felt completely at ease. Their agents explained everything clearly and helped me close the deal smoothly.
+          </p>
+          <h3>BHUVI</h3>
+          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i
+          ><i class="fa fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h1>Start Your Property Journey With Us Today</h1>
+    <a href="contact.html" class="hero-btn">Contact Our Experts</a>
+  </section>
+
+  <section class="footer">
+    <h4>About DreamSpace</h4>
+    <p>We're a team of real estate professionals committed to helping people find the right home or investment property. Based in India, serving globally.</p>
+    <p>Made by DreamHomes</p>
+  </section>
+
+  <script>
+    function welcomeAlert() {
+      alert("Welcome to DreamHomes! Explore your future home with us.");
+    }
+
+    function propertyAlert() {
+      alert("Redirecting you to explore available properties!");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const animatedEls = document.querySelectorAll('.fade-in-bottom');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.classList.add('fade-in-bottom-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      animatedEls.forEach(el => {
+        el.style.opacity = 0;
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

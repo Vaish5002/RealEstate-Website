@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties - DreamHomes Real Estate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lobster', cursive;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoom-in {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: fade-in 0.8s ease forwards;
+    }
+
+    .zoom-in {
+      animation: zoom-in 0.7s ease forwards;
+    }
+
+    .animate-delay-1 {
+      animation-delay: 0.3s;
+    }
+
+    .animate-delay-2 {
+      animation-delay: 0.6s;
+    }
+
+    .animate-delay-3 {
+      animation-delay: 0.9s;
+    }
+  </style>
+</head>
+<body onload="propertyPageAlert()">
+  <section class="sub-header fade-in animate-delay-1">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="properties.html">PROPERTIES</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1 class="zoom-in animate-delay-2">Explore Our Property Listings</h1>
+  </section>
+
+  <section class="course fade-in animate-delay-2">
+    <h1>Types of Properties</h1>
+    <p>We offer a diverse range of property options suited for all needs.</p>
+    <div class="row">
+      <div class="course-col zoom-in animate-delay-1">
+        <h3>Apartments</h3>
+        <p>Perfectly designed urban spaces with amenities, ideal for singles and families.</p>
+      </div>
+      <div class="course-col zoom-in animate-delay-2">
+        <h3>Villas</h3>
+        <p>Exclusive, premium villas nestled in serene locations for luxury living.</p>
+      </div>
+      <div class="course-col zoom-in animate-delay-3">
+        <h3>Commercial Spaces</h3>
+        <p>High-visibility commercial properties suited for offices, showrooms, and startups.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer fade-in animate-delay-2">
+    <h4>About DreamSpace</h4>
+    <p>We're a team of real estate professionals committed to helping people find the right home or investment property. Based in India, serving globally.</p>
+    <p>Made by DreamHomes</p>
+  </section>
+
+  <script>
+    function propertyPageAlert() {
+      alert("Welcome to the Properties page! Explore our top listings.");
+    }
+  </script>
+</body>
+</html>
